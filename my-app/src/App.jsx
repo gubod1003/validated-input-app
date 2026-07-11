@@ -7,7 +7,7 @@ function App() {
       error: "Минимум 3 символа",
     }),
     (value) => ({
-      isValid: /^\w+$/.test(value),
+      isValid: /^[\p{L}\d]+$/u.test(value),
       error: "Только буквы и цифры",
     }),
   ];
